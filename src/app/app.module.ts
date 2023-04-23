@@ -6,13 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { MaterialDidaticoComponent } from './material-didatico/material-didatico.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    MaterialDidaticoComponent,
+    CarouselComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

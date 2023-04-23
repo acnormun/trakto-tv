@@ -1,0 +1,26 @@
+.pill{
+  background-color: #E4EBFB;
+  color: #7183A6;
+}
+
+button{
+  background-color: white;
+}
+
+.chip{
+  box-sizing: border-box;
+  color:#4743FF;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 8px;
+
+  height: 51px;
+  width: 180px;
+
+  border: 1px solid #4743FF;
+  border-radius: 8px;
+}
