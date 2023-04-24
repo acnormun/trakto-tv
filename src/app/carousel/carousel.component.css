@@ -24,3 +24,15 @@ button{
   border: 1px solid #4743FF;
   border-radius: 8px;
 }
+
+  .carousel-inner {
+    display: flex;
+    padding: 1rem;
+  }
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+    padding: 1rem
+  }
+

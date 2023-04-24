@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { MaterialDidaticoComponent } from './material-didatico/material-didatico.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './card/card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
