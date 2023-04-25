@@ -8,7 +8,7 @@ export class PrevDirective {
   constructor(private el:ElementRef) { }
 
   @HostListener('click')
-  nextFunc(){
+  prevFunc(){
     var elm = document.getElementById("slider-main")
     var item = document.getElementsByClassName("item")
     elm?.prepend(item[item.length - 1])
