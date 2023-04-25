@@ -3,10 +3,10 @@
     <div class="d-flex flex-column">
       <div class="d-flex flex-row">
         <span class="badge badge-pill pill">Semana 00/00 até 00/00/00</span>
-        <button type="button">
+        <button type="button" appPrev>
           <img src="../../assets/icons/arrow-left.svg" />
         </button>
-        <button type="button">
+        <button type="button" appNext>
           <img src="../../assets/icons/arrow-right.svg" alt="" />
         </button>
       </div>
@@ -21,8 +21,8 @@
   <section class="carrosel">
     <div class="container-fluid">
       <div class="slider-wrap">
-        <div class="slider-main">
-          <div class="item"*ngFor="let aula of listaAulas">
+        <div class="slider-main" id="slider-main">
+          <div class="item"*ngFor="let aula of listaAulas" id="item">
             <div class="text card">
                 <app-card [capa]="aula.capa" [titulo]="aula.titulo"/>
             </div>

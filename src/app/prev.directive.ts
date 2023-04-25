@@ -1,9 +1,9 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appNext]'
+  selector: '[appPrev]'
 })
-export class NextDirective {
+export class PrevDirective {
 
   constructor(private el:ElementRef) { }
 
@@ -11,7 +11,7 @@ export class NextDirective {
   nextFunc(){
     var elm = document.getElementById("slider-main")
     var item = document.getElementsByClassName("item")
-    elm?.append(item[0])
+    elm?.prepend(item[item.length - 1])
   }
 
 }

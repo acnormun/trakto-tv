@@ -11,6 +11,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NextDirective } from './next.directive';
+import { PrevDirective } from './prev.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NextDirective } from './next.directive';
     MaterialDidaticoComponent,
     CarouselComponent,
     CardComponent,
-    NextDirective
+    NextDirective,
+    PrevDirective
   ],
   imports: [
     BrowserModule,
