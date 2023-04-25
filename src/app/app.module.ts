@@ -10,6 +10,7 @@ import { MaterialDidaticoComponent } from './material-didatico/material-didatico
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NextDirective } from './next.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     MaterialDidaticoComponent,
     CarouselComponent,
-    CardComponent
+    CardComponent,
+    NextDirective
   ],
   imports: [
     BrowserModule,
