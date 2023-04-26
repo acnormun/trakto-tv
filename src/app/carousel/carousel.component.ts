@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ApiAulasService } from '../services/api-aulas.service';
+import { TAulas } from 'src/types/aulas.t';
 
 @Component({
   selector: 'app-carousel',
@@ -14,9 +15,19 @@ export class CarouselComponent implements OnInit {
   @Input() subtitle: string = ''
   @Input() buttonTitle: string = ''
   @Input() buttonColor: string = ''
+  @Input() buttonLink: string = ''
 
-  listaAulas: any
-  listaYt: any
+  listaAulas: Array<TAulas> = [{
+    id:0,
+    capa:'',
+    titulo: ''
+  }]
+
+  listaYt: Array<TAulas> = [{
+    id:0,
+    capa:'',
+    titulo: ''
+  }]
 
   constructor(private aulasService: ApiAulasService) { }
 

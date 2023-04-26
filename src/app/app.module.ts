@@ -14,6 +14,7 @@ import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
 import { NextYtDirective } from './next-yt.directive';
 import { PrevYtDirective } from './prev-yt.directive';
+import { ConteudoComponent } from './conteudo/conteudo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PrevYtDirective } from './prev-yt.directive';
     NextDirective,
     PrevDirective,
     NextYtDirective,
-    PrevYtDirective
+    PrevYtDirective,
+    ConteudoComponent
   ],
   imports: [
     BrowserModule,

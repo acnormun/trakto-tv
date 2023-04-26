@@ -1,0 +1,10 @@
+<div>
+    <app-header [mode]="'light'"/>
+    <div class="conteudo">
+        <div class="aulas">
+            <div *ngFor="let aula of listaAulas" class="cards">
+                <app-card [capa]="aula.capa" [titulo]="aula.titulo"/> 
+         </div>
+        </div>
+    </div>
+</div>

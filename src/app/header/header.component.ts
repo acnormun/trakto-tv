@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
 
   @Input() mode: string = ''
+  @Input() visible: boolean = false
 
   date = new Date();
   dateFormatado = this.date.toLocaleDateString()
