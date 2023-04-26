@@ -1,17 +1,30 @@
 <main class="material">
-  <app-header [mode]="'light'"/>
-  <div style="background-color: #EFF2F9;">
-    <div class="d-flex justify-content-center py-4 px-3">
-      <img src="../../assets/capa.jpg" style="width: 95vw;">
+  <app-header [mode]="'light'" />
+  <div style="background-color: #eff2f9">
+    <div class="d-flex justify-content-center py-4">
+      <img src="../../assets/capa.jpg" style="width: 97vw" />
     </div>
 
     <div class="px-3 py-3">
-      <app-carousel [tipo]="'md'"></app-carousel>
+      <app-carousel
+        [tipo]="'md'"
+        [title]="'Material didático'"
+        [subtitle]="'Acesse suas últimas apresentações de aula.'"
+        [buttonTitle]="'Ver todo conteúdo'"
+        [buttonColor]="'blue'"
+      ></app-carousel>
     </div>
 
     <div class="px-3 py-3">
-      <app-carousel [tipo]="'yt'"></app-carousel>
+      <app-carousel
+        [tipo]="'yt'"
+        [title]="'Vídeo aulas'"
+        [subtitle]="
+          'Complemente os estudos assistindo o conteúdo de forma dinâmica.'
+        "
+        [buttonTitle]="'Abrir no Youtube'"
+        [buttonColor]="'red'"
+      ></app-carousel>
     </div>
-
   </div>
 </main>

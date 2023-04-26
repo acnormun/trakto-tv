@@ -10,11 +10,13 @@ import { ApiAulasService } from '../services/api-aulas.service';
 export class CarouselComponent implements OnInit {
 
   @Input() tipo: string = ''
+  @Input() title: string = ''
+  @Input() subtitle: string = ''
+  @Input() buttonTitle: string = ''
+  @Input() buttonColor: string = ''
 
   listaAulas: any
   listaYt: any
-
-  directive: string = ''
 
   constructor(private aulasService: ApiAulasService) { }
 
@@ -26,10 +28,7 @@ export class CarouselComponent implements OnInit {
   ngOnInit(): void {
     this.aulasService.getData().subscribe((data) => this.listaAulas = data.aulas)
 
-    if(this.tipo === 'md'){
-      this.directive === 'appNext'
-    }
-
+    this.aulasService.getData().subscribe((data) => this.listaYt = data.youtube)
 
   }
 

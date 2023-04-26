@@ -70,3 +70,13 @@ a{
   color: white;
 }
 
+.red{
+  color: #FF0100;
+  border: solid .5px #FF0100;
+}
+
+.blue{
+  color:#4743FF ;
+  border: solid .5px #4743FF;
+}
+
