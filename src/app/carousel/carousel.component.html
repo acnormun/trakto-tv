@@ -3,26 +3,46 @@
     <div class="d-flex flex-column">
       <div class="d-flex flex-row">
         <span class="badge badge-pill pill">Semana 00/00 até 00/00/00</span>
-        <button type="button" appPrev>
+        <button type="button" appPrev *ngIf="tipo==='md'">
           <img src="../../assets/icons/arrow-left.svg" />
         </button>
-        <button type="button" appNext>
+        <button type="button" appNext *ngIf="tipo==='md'">
+          <img src="../../assets/icons/arrow-right.svg" alt="" />
+        </button>
+        <button type="button" appPrevYt *ngIf="tipo==='yt'">
+          <img src="../../assets/icons/arrow-left.svg" />
+        </button>
+        <button type="button" appNextYt *ngIf="tipo==='yt'">
           <img src="../../assets/icons/arrow-right.svg" alt="" />
         </button>
       </div>
       <p class="h4">Material Didático</p>
       <p class="h6">Acesse suas últimas apresentações de aula.</p>
     </div>
-    <button class="chip" (click)="getAulas()">
+    <button class="chip">
       <p class="h6">Ver Todo conteúdo</p>
     </button>
   </nav>
 
-  <section class="carrosel">
+  <section class="carrosel" *ngIf="tipo === 'md'">
     <div class="container-fluid">
       <div class="slider-wrap">
-        <div class="slider-main" id="slider-main">
-          <div class="item"*ngFor="let aula of listaAulas" id="item">
+        <div class="slider-main" id="md">
+          <div class="item md"*ngFor="let aula of listaAulas" id="md">
+            <div class="text card">
+                <app-card [capa]="aula.capa" [titulo]="aula.titulo"/>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="carrosel" *ngIf="tipo === 'yt'">
+    <div class="container-fluid">
+      <div class="slider-wrap">
+        <div class="slider-main" id="yt">
+          <div class="item yt"*ngFor="let aula of listaAulas" id="yt">
             <div class="text card">
                 <app-card [capa]="aula.capa" [titulo]="aula.titulo"/>
             </div>

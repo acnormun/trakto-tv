@@ -12,6 +12,8 @@ import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
+import { NextYtDirective } from './next-yt.directive';
+import { PrevYtDirective } from './prev-yt.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PrevDirective } from './prev.directive';
     CarouselComponent,
     CardComponent,
     NextDirective,
-    PrevDirective
+    PrevDirective,
+    NextYtDirective,
+    PrevYtDirective
   ],
   imports: [
     BrowserModule,

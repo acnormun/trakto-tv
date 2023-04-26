@@ -1,16 +1,16 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appNext]'
 })
 export class NextDirective {
 
-  constructor(private el:ElementRef) { }
+  constructor() { }
 
   @HostListener('click')
   nextFunc(){
-    var elm = document.getElementById("slider-main")
-    var item = document.getElementsByClassName("item")
+    var elm = document.getElementById("md")
+    var item = document.getElementsByClassName("md")
     elm?.append(item[0])
   }
 
