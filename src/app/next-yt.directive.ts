@@ -1,17 +1,15 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appNextYt]'
+  selector: '[appNextYt]',
 })
 export class NextYtDirective {
-
-  constructor() { }
+  constructor() {}
 
   @HostListener('click')
-  nextYTFunc(){
-    var elm = document.getElementById("yt")
-    var item = document.getElementsByClassName("yt")
-    elm?.append(item[0])
+  nextYTFunc() {
+    var elm = document.getElementById('yt');
+    var item = document.getElementsByClassName('yt');
+    elm?.append(item[0]);
   }
-
 }

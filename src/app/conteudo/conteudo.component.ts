@@ -5,22 +5,22 @@ import { TAulas } from 'src/types/aulas.t';
 @Component({
   selector: 'app-conteudo',
   templateUrl: './conteudo.component.html',
-  styleUrls: ['./conteudo.component.css']
+  styleUrls: ['./conteudo.component.css'],
 })
-export class ConteudoComponent implements OnInit{
+export class ConteudoComponent implements OnInit {
+  constructor(private aulasService: ApiAulasService) {}
 
-  constructor(private aulasService: ApiAulasService){}
-
-  listaAulas: Array<TAulas> = [{
-    id:0,
-    capa:'',
-    titulo: ' '
-  }]
+  listaAulas: Array<TAulas> = [
+    {
+      id: 0,
+      capa: '',
+      titulo: ' ',
+    },
+  ];
 
   ngOnInit(): void {
-    
-    this.aulasService.getData().subscribe((data) => this.listaAulas = data.aulas)
+    this.aulasService
+      .getData()
+      .subscribe((data) => (this.listaAulas = data.aulas));
   }
-
-
 }

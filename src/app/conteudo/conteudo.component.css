@@ -1,12 +1,14 @@
 .conteudo{
+    display: flex;
     background-color: #EFF2F9;
-    height: 89.7vh;
+    height: 100%;
     padding: 1rem;
     height: 100vh;
 }
 
 .aulas{
     display: flex;
+    height: 90vh;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

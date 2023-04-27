@@ -15,6 +15,7 @@ import { PrevDirective } from './prev.directive';
 import { NextYtDirective } from './next-yt.directive';
 import { PrevYtDirective } from './prev-yt.directive';
 import { ConteudoComponent } from './conteudo/conteudo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,14 +30,10 @@ import { ConteudoComponent } from './conteudo/conteudo.component';
     PrevDirective,
     NextYtDirective,
     PrevYtDirective,
-    ConteudoComponent
+    ConteudoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

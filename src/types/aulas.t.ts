@@ -1,5 +1,5 @@
-export type TAulas={
-    id: number,
-    capa: string,
-    titulo: string
-}
+export type TAulas = {
+  id: number;
+  capa: string;
+  titulo: string;
+};

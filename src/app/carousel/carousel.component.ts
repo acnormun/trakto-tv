@@ -6,41 +6,46 @@ import { TAulas } from 'src/types/aulas.t';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css']
+  styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+  @Input() tipo: string = '';
+  @Input() title: string = '';
+  @Input() subtitle: string = '';
+  @Input() buttonTitle: string = '';
+  @Input() buttonColor: string = '';
+  @Input() buttonLink: string = '';
 
-  @Input() tipo: string = ''
-  @Input() title: string = ''
-  @Input() subtitle: string = ''
-  @Input() buttonTitle: string = ''
-  @Input() buttonColor: string = ''
-  @Input() buttonLink: string = ''
+  listaAulas: Array<TAulas> = [
+    {
+      id: 0,
+      capa: '',
+      titulo: '',
+    },
+  ];
 
-  listaAulas: Array<TAulas> = [{
-    id:0,
-    capa:'',
-    titulo: ''
-  }]
+  listaYt: Array<TAulas> = [
+    {
+      id: 0,
+      capa: '',
+      titulo: '',
+    },
+  ];
 
-  listaYt: Array<TAulas> = [{
-    id:0,
-    capa:'',
-    titulo: ''
-  }]
-
-  constructor(private aulasService: ApiAulasService) { }
+  constructor(private aulasService: ApiAulasService) {}
 
   getAulas() {
     this.aulasService.getData().subscribe((data) => {
-      this.listaAulas = data.aulas
-    })
+      this.listaAulas = data.aulas;
+    });
   }
   ngOnInit(): void {
-    this.aulasService.getData().subscribe((data) => this.listaAulas = data.aulas)
+    this.aulasService
+      .getData()
+      .subscribe((data) => (this.listaAulas = data.aulas));
 
-    this.aulasService.getData().subscribe((data) => this.listaYt = data.youtube)
-
+    this.aulasService
+      .getData()
+      .subscribe((data) => (this.listaYt = data.youtube));
   }
-
 }

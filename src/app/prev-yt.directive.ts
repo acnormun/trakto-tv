@@ -1,17 +1,15 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appPrevYt]'
+  selector: '[appPrevYt]',
 })
 export class PrevYtDirective {
-
-  constructor() { }
+  constructor() {}
 
   @HostListener('click')
-  prevFunc(){ 
-    var elm = document.getElementById("yt")
-    var item = document.getElementsByClassName("yt")
-    elm?.prepend(item[item.length - 1])
+  prevFunc() {
+    var elm = document.getElementById('yt');
+    var item = document.getElementsByClassName('yt');
+    elm?.prepend(item[item.length - 1]);
   }
-
 }

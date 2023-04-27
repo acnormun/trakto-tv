@@ -6,15 +6,15 @@ import { MaterialDidaticoComponent } from './material-didatico/material-didatico
 import { ConteudoComponent } from './conteudo/conteudo.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent},
-  {path:'', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'material-didatico', component:MaterialDidaticoComponent},
-  {path: 'conteudo', component: ConteudoComponent}
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'material-didatico', component: MaterialDidaticoComponent },
+  { path: 'conteudo', component: ConteudoComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

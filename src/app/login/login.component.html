@@ -1,27 +1,24 @@
 <div style="height: 100vh; background-color: #EFF2F9;" >
   <main class="form-signin col-md-4 mx-auto align-items-center ">
-    <form class="p-top align-items-center pt-auto" style="padding-top: 25%;">
+    <form  class="p-top align-items-center pt-auto" style="padding-top: 25%;" [formGroup]="userLogin" (ngSubmit)="login()" >
       <img class="mb-4" src="../../assets/icons/logo-light.svg" alt="Logo Trakto" width="125" height="30">
       <h1 class="h3 mb-3 fw-normal pb-3">Olá, faça login em sua conta.</h1>
 
-      <div class="form pb-3">
+      <div class="form-group pb-3" [formGroup]="userLogin">
         <h6>Email</h6>
-        <input type="email" class="form-control" id="email" placeholder="fulano@gmail.com">
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="fulano@gmail.com">
       </div>
-      <div class="form">
+      <div class="form-group" [formGroup]="userLogin">
         <h6>Senha</h6>
-        <input type="password" class="form-control" id="password" placeholder="senha">
+        <input type="password" class="form-control" id="password" formControlName="password" placeholder="senha" >
       </div>
 
-      <div class="checkbox mb-3">
+      <div class="checkbox mb-3 form-group">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <a routerLink="/home">
-        <button class="w-100 btn btn-lg btn-primary" type="submit" routerLink="/home">Entrar</button>
-      </a>
-
+        <button class="w-100 btn btn-lg btn-primary forsubmit" value="Log In" (click)="login()" routerLink="/home">Entrar</button>
       <p class="mt-5 mb-3 text-body-secondary">&copy; ACNormun</p>
     </form>
   </main>
