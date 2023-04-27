@@ -10,8 +10,8 @@ import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 export class LoginComponent {
   userLogin = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl('')
-  })
+    password: new FormControl(''),
+  });
 
   constructor(private loginService: LoginService) {}
 
@@ -21,8 +21,5 @@ export class LoginComponent {
       password: this.userLogin.get('password')?.getRawValue(),
     };
     return this.loginService.login(obj).subscribe((data) => data);
-
   }
-
-
 }
