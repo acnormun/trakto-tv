@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Instalar Dependencias
 
-Run 'npm install' 
+Run `npm install` 
 
 ### Server
 
